@@ -67,7 +67,7 @@ collections:
       - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
       - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
       - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
-  - name: 'recipe'
+  - name: 'recipes'
     label: 'Recipe'
     folder: 'app/content/recipe'
     create: true
@@ -89,6 +89,6 @@ collections:
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     format: 'json'
     fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Description, name: description, widget: string, required: false }
-      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+      - { label: Title, name: title, widget: string}
+      - { label: Description, name: description, widget: string, required: false}
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false}
