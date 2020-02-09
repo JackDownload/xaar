@@ -25,7 +25,7 @@ interface Page {
   seoMetaImage?: string;
 }
 
-interface Categories {
+interface Recipe {
   title: string;
   subtitle?: string;
   slug?: string;
