@@ -24,3 +24,23 @@ interface Page {
   seoDescription?: string;
   seoMetaImage?: string;
 }
+
+interface Categories {
+  title: string;
+  subtitle?: string;
+  slug?: string;
+  content: string;
+  featuredImage?: string;
+  seoDescription?: string;
+  seoMetaImage?: string;
+  category?: string;
+}
+
+interface Categories {
+  title: string;
+  slug?: string;
+  content: string;
+  featuredImage?: string;
+}
+
+
