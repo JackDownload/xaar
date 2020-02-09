@@ -67,3 +67,28 @@ collections:
       - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
       - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
       - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+  - name: 'recipe'
+    label: 'Recipe'
+    folder: 'app/content/recipe'
+    create: true
+    slug: '{{slug}}'
+    format: 'json'
+    sort: 'published_at:desc'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: 'Published At', name: publishedAt, widget: date, format: 'Do MMM YYYY' }
+      - { label: Content, name: content, widget: markdown }
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
+      - { label: 'SEO Description', name: seoDescription, widget: text, required: false }
+      - { label: 'SEO Meta Image', name: seoMetaImage, widget: image, required: false }
+      - { label: 'Category', name: 'category', widget: 'relation', collection: 'blogcategories', searchFields: ['title'], valueField: 'title', displayFields: ['title'], required: false}
+  - label: 'Categories'
+    name: 'blogcategories'
+    folder: 'app/content/categories' # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'json'
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string, required: false }
+      - { label: 'Featured Image', name: featuredImage, widget: image, required: false }
